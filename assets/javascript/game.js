@@ -1,47 +1,48 @@
 
 
+    //array of word options
+    var computerOptions = ["beta", "html", "cql", "python", "racket", "rust", "kotlin", "simula", "sather", "labview", "ruby", "perl", "swift", "falcon", "erlang"];
 
-
-//array of word options
-var computerOptions = ["beta", "html", "cql", "python", "racket", "rust", "kotlin", "simula", "sather", "labview", "ruby", "perl", "swift", "falcon", "erlang"];
-
-//pick a random word
+    //pick a random word
 var computerPick = computerOptions[Math.floor(Math.random() * computerOptions.length)];
     console.log(computerPick);
-// define docUnderscore print to html
+    // var computerPick = word[random];
+    // define docUnderscore and wrong letter print to html
 var docUnderscore = document.getElementsByClassName("underscore");
-// right letter from html
-var rightLetter = [];
 var docWrongLetter = document.getElementsByClassName("wrongLetter");
-// wrong letter array
+var docWins = document.getElementsByClassName("wins");
+var docGuesses = document.getElementsByClassName("guesses");
+    // right letter from html
+var rightLetter = [];
+    // wrong letter array
 var wrongLetter = [];
-//get users guess
-var underscore = [];
-// underscores on page at start
-// var makeUnderscore = [];
-var underscore = document.getElementsByClassName("underscore");
-//make underscores for work length
-function makeUnderscore () {
+var wins = 0;
+var losses = 0;
+var guesses = 9;
+var wonGame = false;
+
+    //make underscores for work length
+function makeUnderscore() {
     underscore = [];
     for (var i = 0; i < computerPick.length; i++) {
-    underscore.push("_");
-    // document.getElementById("underscore").innerHTML = underscore.join("");
+        underscore.push("_ ");
+        docUnderscore[0].innerHTML = underscore.join("")
     }
-    console.log(underscore);
-    docMakeUnderscore.getElementsByClassName("underscore").innerHTML = underscore.join("_");
+        console.log(underscore);
 }
 
 function startGame() {
-    // makeUnderscore(); 
-    // docMakeUnderscore[0].innerHTML = underscore.join("_");
+    
+    makeUnderscore();
+    docGuesses.innerHTML = guesses.toString();
+    
 }
-// console.log(makeUnderscore());
 startGame();
 
-// I think I need a funtion for loop here instead of the doc.add
-
-document.addEventListener("keypress", event); {
-    // key gets logged
+//get users guess
+// function 
+document.onkeyup = function(event) {
+    // console.log(event);
     // change to lower case
     var keyPressed = event.key.toLowerCase();
         console.log(keyPressed);
@@ -51,38 +52,61 @@ document.addEventListener("keypress", event); {
         console.log(true);
         //add to right letters
         rightLetter.push(keyPressed);
-        console.log(rightLetter);
-
+            console.log(rightLetter);
         //when right replace an underscore in the array
         underscore[computerPick.indexOf(keyPressed)] = keyPressed;
-        console.log(underscore);
-
-        docUnderscore[0].innerHTML = underscore.join(" ");
-        //if all underscores are replaced
+            console.log(underscore);
+        docUnderscore[0].innerHTML = underscore.join("");
+        // if all underscores are replaced
         if (underscore.join("") == computerPick) {
+            wonGame = true;
             alert("You Won!")
+            wins++;
+        function wins() {
+            wins = [];
+            for (var i = 0; i == computerPick.lenght; i++) {
+                wins.push("");
+                docWins[0].innerHTML == wins.join("");
+            }
+      }
+            // document.getElementsByClassName("wins").textContent = "Wins Count: " + wins;
+            // docWins.innerHTML = wins.toString();
+            // document.getElementsByClassName("myForm").reset();
             //if won restart game after cleared alert
 
             //add one point to wins
         }
     } else {
+        function wrongGuesses() {
+            guesses = [];
+            for (var i = 0; i !== computerPick.length; i--) {
+                guesses.push("");
+                docGuesses[0].innerHTML == guesses.join("");
+            if (guesses.join("") !== computerPick) {
+                wonGame = false;
+                alert("You lost. Try again!")
+                losses++;
+            }
+            }
+        }
         // add to wrong letters
         wrongLetter.push(keyPressed);
-        console.log(wrongLetter);
-        //print to doc
-        docWrongLetter[0].innerHTML = wrongLetter;
+            console.log(wrongLetter);
+        docWrongLetter[0].innerHTML = wrongLetter.join("");
+        guesses--;
+        docGuesses.innerHTML = guesses.toString(); 
         // only have 9 tries
         // if exceeds 9 tries alert you lost
         // add one point to losses
     }
 }
-
+function resetUnderscore() {
+    guesses = 9;
+    wins++;
+    startGame();
+}
 //get it to write to document .innerHTML
 // organize global var, then objects then calls
-
-
-
-
 // var letterLocation = computerPick.search(userGuess)
 //     //if statements for letter location
 //     if (letterLocation === -1) {
@@ -97,11 +121,18 @@ document.addEventListener("keypress", event); {
 //         document.write("_ ");
 //     }
 
-
-
-
-    // document.getElementById("game").innerHTML = html;
-
-
 //       // Hide the directions
     //   directionsText.textContent = "";
+
+//get it to write to document .innerHTML
+// organize global var, then objects then calls
+        //     for (var i =1; i< 10; i++) {
+        //         var randomDigit = Math.floor(Math.random() *10);
+        //         randomNum += randomDigit;
+        //     }
+        //     console.log(randomNum)
+        // }
+        // for (var i =1; i< 10; i++) {
+        //     var randomDigit = Math.floor(Math.random() *10);
+        //     randomNum += randomDigit;
+        // }  

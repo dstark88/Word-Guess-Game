@@ -1,4 +1,15 @@
+@media screen and (max-width: 980px) 
+  and (max-width: 768px) 
+  and (max-width: 640px) {
+body {
+}
+  }
 
+/* .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+} */
 body {
     background-image: url("../images/purty_wood.png"); 
 }
@@ -6,47 +17,44 @@ body {
 header {
     font-size: 25px;
     text-align: center;
-    margin: 50px auto;
-    height: 150px;
+    margin: 20px auto;
+    height: 100px;
     width: 80%;
 }
 
-.rightLetter {
-    font-size: 20px;
+.row1 {
+    font-size: 25px;
     text-align: center;
-    margin: 50px auto;
+    margin: 20px auto;
     height: 50px;
     width: 80%;
 }
-
-.underscore {
-    font-size: 50px;
+.row2 {
+    font-size: 25px;
     text-align: center;
-    margin: 50px auto;
-    height: 100px;
-    width: 80%; 
+    margin: 20px auto;
+    height: 50px;
+    width: 80%;
 }
-
-.wrongLetter {
-    font-size: 20px;
+.row3 {
+    font-size: 25px;
     text-align: center;
-    margin: 50px auto;
-    height: 150px;
+    margin: 20px auto;
+    height: 50px;
+    width: 80%;
+}
+.row4 {
+    font-size: 25px;
+    text-align: center;
+    margin: 20px auto;
+    height: 80px;
     width: 80%;
 }
 
-.wins {
-    font-size: 20px;
+.row5 {
+    font-size: 25px;
     text-align: center;
-    margin: 50px auto;
-    height: 150px;
-    width: 80%;
-}
-
-.losses {
-    font-size: 20px;
-    text-align: center;
-    margin: 50px auto;
-    height: 150px;
+    margin: 20px auto;
+    height: 80px;
     width: 80%;
 }
