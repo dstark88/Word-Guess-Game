@@ -4,11 +4,11 @@ body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 18px;
     line-height: 34px;
-    color: #65b4f3;
+    color: #154377;
     /* background-color: seagreen; */
-    background-image: url("../images/stones.jpg");
-    /* background-repeat: no-repeat;
-    background-size: 100%; */
+    background-image: url("../images/haze.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
   
   * {
@@ -32,7 +32,7 @@ body {
   h3 {
     font-family: Georgia, Times, "Times New Roman", serif;
     font-weight: 700;
-    color: #65b4f3;
+    color: #154377;
   }
   
   h1 {
@@ -76,7 +76,7 @@ body {
     color: #ffffff;
     text-align: center;
     text-decoration: none;
-    background: #65b4f3;
+    background: #154377;
   }
 
   .navbar {
@@ -86,7 +86,7 @@ body {
   nav {
     float: right;
     margin-top: 25px;
-    color: #65b4f3;
+    color: #154377;
   }
   
   nav a {
@@ -94,7 +94,7 @@ body {
     padding-left: 15px;
     margin-left: 15px;
     line-height: 18px;
-    color: #65b4f3;
+    color: #154377;
     text-decoration: none;
     border-left: 1px solid #efefef;
   }
@@ -117,7 +117,7 @@ body {
     color: #cccccc;
     text-align: center;
     background: #666666;
-    border-top: 8px solid #65b4f3;
+    border-top: 8px solid #154377;
     height: 35px;
   }
   
