@@ -5,7 +5,6 @@ body {
     font-size: 18px;
     line-height: 34px;
     color: #154377;
-    /* background-color: seagreen; */
     background-image: url("../images/haze.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -103,24 +102,6 @@ body {
     border-left: 0 none;
   }  
   
-  
-  /* footer */
-  
-  footer {
-    /* position: fixed; */
-    width: 100%;
-    margin-top: 10px;
-    padding: 5px 0;
-    clear: both;
-    font-size: 12px;
-    color: #ffffff;
-    color: #cccccc;
-    text-align: center;
-    background: #666666;
-    border-top: 8px solid #154377;
-    height: 35px;
-  }
-  
   h3, h2 {
     padding-bottom: 10px;
     margin-bottom: 15px;
@@ -136,7 +117,7 @@ body {
   .main-section {
     width: 100%;
     max-width: 960px;
-    /* padding: 10px; */
+    padding: 10px;
     margin: 0 0 10px;
     background-image: url("../images/cheap_diagonal_fabric.png");
     border: 1px solid #dddddd;
@@ -149,3 +130,17 @@ body {
     margin: 0 0 10px;
     background-image: url("../images/cheap_diagonal_fabric.png");
 }
+  /* footer */  
+  footer {
+    position: fixed;
+    width: 100%;
+    margin-top: 10px;
+    clear: both;
+    font-size: 12px;
+    color: #ffffff;
+    color: #cccccc;
+    text-align: center;
+    background: #666666;
+    border-top: 8px solid #154377;
+    height: 40px;
+  }
